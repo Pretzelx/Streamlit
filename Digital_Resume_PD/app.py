@@ -2,6 +2,7 @@
 from pathlib import Path
 import streamlit as st
 from PIL import Image
+import random
 
 #---PATH SETTINGS---
 
@@ -10,20 +11,21 @@ css_file = current_dir / "Styles" / "main.css.css"
 cv_file = current_dir / "Assets" / "Prerna_Duhan_CV_.pdf"
 profile_pic = current_dir / "Assets" / "Prerna_Pic_copy.jpg"
 
-
 #---GENERAL SETTINGS---
 
 PAGE_TITLE = " Digstital Resume | Prerna Duhan "
 PAGE_ICON = ":random:"
 NAME = "Prerna Duhan"
 DESCRIPTION = """
-👩‍💻Tech savvy MSc. Medical Informatics Student, searching for an opportunity to hone my skills and gain professional experience in digital upskilling, digitization and data analaysis
+👩‍💻Tech-savvy MSc.Medical Informatics student, eager to apply my expertise and passion for digital transformation, data analysis, and digital upskilling in a professional environment. Seeking opportunities to further develop my skills and contribute to innovative projects at the intersection of healthcare and technology
 """
 EMAIL = "duhanprerna11@gmail.com"
 SOCIAL_MEDIA = {
     "LinkedIn": "https://www.linkedin.com/in/prerna-duhan/",
     "GitHub": "https://github.com/Pretzelx",
+    "Instagram": "https://www.instagram.com/mytinynotebook/"
 }
+
 
 #---LOAD CSS FILE, PDF & PROFILE PIC---
 
@@ -57,30 +59,33 @@ cols = st.columns(len(SOCIAL_MEDIA))
 for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
     cols[index].write(f"[{platform}]({link})")
 
+
 #---EXPERIENCE & QUAIFICATIONS---
 st.write("#")
 st.subheader("Experience & Qualifications")
 st.write(
     """
-    - ✅ Strong hands on experience and knowledge in MS Excel, PowerBI and Tableau
-    - ✅ Programming Experience in Python and R 
-    - ✅ Proficient with Microsoft, Google and Adobe Suite 
-    - ✅ Team player displaying a strong sense of initiative on tasks 
-    - ✅ 5 years of combined academic and professional experience extracting insights from data
-    - ✅ Passionate about Real World Data, AI and Deep learning, and their applications in digitalization of industries$
-    - 🌏 Global individual with strong communication and presentation skills
-    - 🗣️ English (Native), German(B1-B2), French (A2), Hindi (Native)"""
+    - ✅ Strong hands on experience and knowledge in **MS Excel**, **PowerBI** and **Tableau**.
+    - ✅ Programming Experience in **Python** and **R**.
+    - ✅ Proficient with Microsoft, **Google** and **Adobe Suite**.
+    - ✅ Team player displaying a strong sense of initiative on tasks, driving projects forward with precision and dedication
+    - ✅ 5 years of diverse experience, seamlessly integrating academic knowledge with hands-on expertise to extract actionable insights from data.
+    - ✅ Enthusiastic about the intersection of **Real World Data**, AI, and Deep Learning, particularly fascinated by their potential in the digitalization of healthcare and finance.
+    - 🌏 Possessing strong global perspectives, complemented by exceptional communication and presentation skills.
+    - 🗣️ Fluent in **English** (Native), proficient in **German** (B1-B2), conversational in **French** (A2), and fluent in **Hindi** (Native)
+    """
 )
 
 #---SKILLS---
 st.write("#")
 st.subheader("Skills")
+
 st.write(
     """
     - 💻 Programming: Python (Scikit-learn, Pandas, NumPy), R
     - 📊 Data Visualization: Power BI, Tableau, MS Excel
-    - 🤖 Modelling: Logistic regression, Linear regression, Decision trees, SVM
-    - 🧬 Bioinformatics: Sequence searching, protein database and genome browsers, phylogenetics, functional genomics, variation and disease studies, visualisation and clustering, network analysis, logical and metabolic modelling, biostatistics.
+    - 🤖 Modelling: Classification, Regression, SVM, UMAP
+    - 🧬 Bioinformatics: Sequence searching, protein database and genome browsers, functional genomics, variation and disease studies, visualisation and clustering, network analysis, logical and metabolic modelling, biostatistics.
     - 🧪 Cheminformatics: DataWarrior, SureChEMBL, CAS Scifinder, RDKit and MCPairs. 
     """
 )
@@ -162,4 +167,12 @@ st.write(
 st.write("#")
 st.subheader("Activities, Volunteering and Other Interests")
 st.write("---")
-
+st.write("""
+    - 📚Rotes Kreuz Basel: I work in refugee integration services, helping everyone integrate effectively and establish their lives in Basel. Additionally, I teach English and German to further assist in their integration process.
+    - 🏘️CityWise Manchester: I engaged in teaching and providing care for underprivileged children, offering educational support and creating a nurturing environment to foster their growth and development. 
+    - 🏞️I am a very active individual who loves yoga, cycling and hiking.
+    - 🎨Creatively inclined, I enjoy sketching and you can see my work on Instagram (@mytinynotebook).
+    - 🌌Currently, I'm exploring how to harness generative AI for coding creatively and producing generative art (stay tuned for updates!)
+    - 🎙️Engaged in public speaking and debates, I embrace the opportunity to articulate ideas, challenge perspectives, and foster meaningful dialogue in pursuit of shared understanding and growth.
+         """
+)
