@@ -8,12 +8,12 @@ import random
 
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir / "Styles" / "main.css.css"
-cv_file = current_dir / "Assets" / "Prerna_Duhan_CV_.pdf"
+cv_file = current_dir / "Assets" / "Prerna_Duhan_CV_data.pdf"
 profile_pic = current_dir / "Assets" / "Prerna_Pic_copy.jpg"
 
 #---GENERAL SETTINGS---
 
-PAGE_TITLE = " Digstital Resume | Prerna Duhan "
+PAGE_TITLE = " Digital Resume | Prerna Duhan "
 PAGE_ICON = ":random:"
 NAME = "Prerna Duhan"
 DESCRIPTION = """
@@ -38,6 +38,7 @@ with open(cv_file, "rb") as pdf_file:
 profile_pic = Image.open(profile_pic)
 
 #---Image Settings---
+
 col1, col2 = st.columns(2, gap="small")
 with col1:
     st.image(profile_pic, width=240)
@@ -66,13 +67,13 @@ st.subheader("Experience & Qualifications")
 st.write(
     """
     - ✅ Strong hands on experience and knowledge in **MS Excel**, **PowerBI** and **Tableau**.
-    - ✅ Programming Experience in **Python** and **R**.
-    - ✅ Proficient with Microsoft, **Google** and **Adobe Suite**.
+    - ✅ Programming Experience in **Python**, **SQL** and **R**.
+    - ✅ Proficient with **Microsoft**, **Google** and **Adobe Suite**.
     - ✅ Team player displaying a strong sense of initiative on tasks, driving projects forward with precision and dedication
     - ✅ 5 years of diverse experience, seamlessly integrating academic knowledge with hands-on expertise to extract actionable insights from data.
     - ✅ Enthusiastic about the intersection of **Real World Data**, AI, and Deep Learning, particularly fascinated by their potential in the digitalization of healthcare and finance.
     - 🌏 Possessing strong global perspectives, complemented by exceptional communication and presentation skills.
-    - 🗣️ Fluent in **English** (Native), proficient in **German** (B1-B2), conversational in **French** (A2), and fluent in **Hindi** (Native)
+    - 🗣️ Fluent in **English** (Native), proficient in **German** (B2), conversational in **French** (A2), and fluent in **Hindi** (Native)
     """
 )
 
@@ -82,9 +83,9 @@ st.subheader("Skills")
 
 st.write(
     """
-    - 💻 Programming: Python (Scikit-learn, Pandas, NumPy), R
+    - 💻 Programming: Python (Scikit-learn, Pandas, NumPy, TensorFlow), R, SQL
     - 📊 Data Visualization: Power BI, Tableau, MS Excel
-    - 🤖 Modelling: Classification, Regression, SVM, UMAP
+    - 🤖 Modelling: Classification, Regression, UMAP
     - 🧬 Bioinformatics: Sequence searching, protein database and genome browsers, functional genomics, variation and disease studies, visualisation and clustering, network analysis, logical and metabolic modelling, biostatistics.
     - 🧪 Cheminformatics: DataWarrior, SureChEMBL, CAS Scifinder, RDKit and MCPairs. 
     """
@@ -99,6 +100,7 @@ st.write(
     - 📃 Finance Foundations, LinkedIn, 09/2021
     - 📃 Tobacco Product Regulation, WHO, 09/2020
     - 📃 Occupational Health and Safety for Health Workers, WHO, 09/2022
+    - 📃 Microsoft Power BI, Forage, 04/2023
     """ )
 
 
@@ -161,6 +163,11 @@ st.write(
         - Generated DGAT1 and Glucokinase molecules through Matched Molecular Pair Analysis and identified connections between current DGAT1 and Glucokinase patent literature.
     - 🔬Mechanism of Action and Efficacy of Agents Targeting the Interferon Pathway in the Treatment of Systemic Lupus Erythematosus; Supervisor - Prof. Ian Bruce (Chair of Rheumatology & Director of National Institute of Health Research Manchester)
     - 🔬The impact of caffeine and caffeine like cognitive enhancers on neural correlates (CA1 and CA3) of cognitive activity in acute mouse hippocampal slices in vitro; Supervisor - Dr. Jon Turner (Dept. of Neuroscience and Experimental Psychology). 
+    - 🔬Comparison of known Protein Language Models (PLMs) in their ability to identify masked protein sequences (Ongoing research).
+    - 🔬 eCapture Project – Development and validation of an electronic data capture system for EDSS assessments in Multiple Sclerosis;Supervisor – Dr. Marcus D’Souza (Department of Neurology, University Hospital Basel) (Ongoing Research)
+    - 🔬 Analysis of Diabetes Insipidus datasets for uncovering data collection and machine learning bias 
+    - 🔬 Identifying and analysing potential digital biomarkers for eye disorder detection.
+    
     """
 )
 
